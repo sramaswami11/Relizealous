@@ -1,5 +1,7 @@
 ﻿@*@page  "/kuratkal"*@
-@page "/kuratkal/{key1?}/{key2?}"
+@*@page "/kuratkal/{key1?}/{key2?}"*@
+@page "/kuratkal/{key1?}/"
+
 @using Relizealous.Common
 @inject IJSRuntime js;
 
@@ -7,18 +9,18 @@
 <h4> @key2</h4>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
-   
-    @foreach (var kural in Kural.Collection.Where(x=>x.Adhikaram.ToString() == key1))
+
+    @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == key1))
     {
-    <TheCard HeaderText="@kural.Statement">
-        <b>@kural.Description</b><br /><br />
-        <button class="btn btn-primary" @onclick="() => jsObj.PlayAudioFile(kural.AudioLink)">Play</button>
-        <span>&nbsp;</span>
-        <audio id="player">
-            <source id="playerSource" src="" />
-        </audio>
-        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Translate" Color="Color.Success">Translate</MudButton>
-    </TheCard>
+        <TheCard HeaderText="@kural.Statement">
+            <b>@kural.Description</b><br /><br />
+            <button class="btn btn-primary" @onclick="() => jsObj.PlayAudioFile(kural.AudioLink)">Play</button>
+            <span>&nbsp;</span>
+            <audio id="player">
+                <source id="playerSource" src="" />
+            </audio>
+            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Translate" Color="Color.Success">Translate</MudButton>
+        </TheCard>
     }
 </div>
 
