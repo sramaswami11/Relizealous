@@ -1,0 +1,70 @@
+﻿@inherits LayoutComponentBase
+@*<style>
+        body {
+            background-color: lightblue;
+        }
+    </style>*@
+
+<!--<CascadingValue Value="this">
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <div class="main">
+            <div class="top-row px-4">
+                <div class="top-row px-4">
+                    @if (_isLightMode)
+                    {
+                <MudIconButton Icon="@Icons.Material.Filled.Brightness4" OnClick="@ToggleTheme" /> }
+                                else
+                                {
+                <MudIconButton Icon="@Icons.Material.Filled.Brightness5" OnClick="@ToggleTheme" />}
+                </div>
+                <RadzenDropDown TValue="string" Placeholder="Choose your language..." Data="@customers" TextProperty="CompanyName" ValueProperty="CustomerID" Change=@(args => OnChange(args, "DropDown")) />-->
+@*<a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>*@
+<!--</div>
+
+            <div class="content px-4">
+                @Body
+            </div>
+        </div>
+    </div>
+</CascadingValue>-->
+<MudLayout>
+    @*<MudAppBar Elevation="3">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="ToggleSidebar" />
+            <MudAppBarSpacer />
+            @if (_isLightMode)
+            {
+                <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="ToggleTheme" />
+            }
+            else
+            {
+                <MudIconButton Icon="@Icons.Material.Filled.Brightness5" Color="Color.Inherit" OnClick="ToggleTheme" />
+            }
+        </MudAppBar>*@
+    <AppBar OnSidebarToggled="ToggleSidebar" OnThemeToggled="ToggleTheme" />
+    @*<MudDrawer @bind-Open="_sidebarOpen" Elevation="1">
+            <MudDrawerHeader>
+                <MudAvatar Color="Color.Transparent" Size="Size.Large" Image="images/Siva.png" />
+                <MudText Typo="Typo.h5" Color="Color.Primary" Style="margin-top:10px; margin-left:15px;">Relizealous</MudText>
+            </MudDrawerHeader>
+            <MudNavMenu>
+                <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Filled.Home">Home</MudNavLink>
+                <MudNavLink Href="/fetchdata" Icon="@Icons.Filled.Storage">FetchData</MudNavLink>
+                <MudNavGroup Title="Expanding" Icon="@Icons.Filled.DashboardCustomize" Expanded="true">
+                    <MudNavLink Href="#" Icon="@Icons.Filled.Camera">Photos</MudNavLink>
+                    <MudNavLink Href="#" Icon="@Icons.Filled.Celebration">Party</MudNavLink>
+                </MudNavGroup>
+            </MudNavMenu>
+        </MudDrawer>*@
+    <NavMenu SideBarOpen="_sidebarOpen" />
+    <MudMainContent Class="pt-16 px-16">
+        <MudContainer Class="mt-6">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+<MudThemeProvider Theme="_currentTheme" />

@@ -1,0 +1,71 @@
+﻿@page "/old_Index"
+@inject IJSRuntime js;
+@inject IStringLocalizer<Index> localizer
+@using Relizealous.Common
+
+@*<h1>@localizer["test"]</h1>*@
+
+<div class="row col-12">
+    <div class="col-md-9">
+        <h1>Welcome to Relizealous!</h1>
+
+        <h2>A humble initiative to present early Hinduism texts, stotras, translations, and parallels. </h2><br />
+        <h3>
+            Latest Updates:
+        </h3>
+    </div>
+    <div class="col-md-3">
+        <img src="/images/Siva.png" class="center-block" width="100" height="100">
+    </div>
+</div>
+
+
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    @foreach (var update in LatestUpdate.Collection)
+    {
+    <TheCard HeaderText="@update.Title">
+        <b>@update.Description</b><br /><br />
+        @if (string.IsNullOrEmpty(Layout.Language))
+        {
+            Layout.Language = "Tamil";
+        }
+        <a href=@($"/Contents/slokas/{Layout.Language}/{update.LangLink}") target="_blank"> Read More </a>
+        <button class="btn btn-primary" @onclick="() => jsObj.PlayAudioFile(update.AudioLink)">Test</button>
+        
+        <span>&nbsp;</span>
+        <audio id="player">
+            <source id="playerSource" src="" />
+        </audio>
+    </TheCard>
+      }
+</div>
+
+<SurveyPrompt Title="How is Relizealous working for you?" />
+
+@code {
+
+    [CascadingParameter]
+    public MainLayout Layout { get; set; }
+
+    private CallJavascript jsObj;
+
+
+
+    protected override void OnInitialized()
+    {
+        //string myString = "\u0B85";
+        //byte[] unicode = System.Text.Encoding.Unicode.GetBytes(myString);
+        //string myString = "பிரதமர் மோடி அரசின் முடிவுகளை உலகமே பாராட்டுகிறது:  மத்திய அமைச்சர்";
+        //Console.WriteLine(myString);
+        jsObj = new CallJavascript(js);
+
+        Console.WriteLine("Lang passed  from mainlayout into stotras comp: " + Layout.Language);
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine("OnParametersSet: Lang passed  from mainlayout into stotras comp:" + Layout.Language);
+    }
+
+}

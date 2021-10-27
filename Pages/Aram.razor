@@ -1,0 +1,21 @@
+﻿@page "/aram"
+@using Relizealous.Data
+<h3>அதிகாரங்கள்</h3>
+
+
+    
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    @foreach (var aram in Relizealous.Data.Aram.Collection)
+    {
+    <TheCard HeaderText="@aram.Title">
+        <b>@aram.Description</b><br /><br />
+        <a href="/Kuratkal/@aram.Title_Enum/@aram.Title" target="_blank"> குறட்கள் </a>
+        
+    </TheCard>
+    }
+</div>
+
+@code {
+
+}

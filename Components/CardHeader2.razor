@@ -1,0 +1,7 @@
+﻿@*<div class="card-header">@ChildContent</div>*@
+<MudText Class="card-header"Color="Color.Primary" >@ChildContent</MudText>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}
+

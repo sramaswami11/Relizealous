@@ -1,0 +1,109 @@
+﻿@*<div class="top-row pl-4 navbar navbar-dark">
+        <a class="navbar-brand" href="">Relizealous</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="tamilbooks" @onclick="()=>expandSubMenu = !expandSubMenu">
+                    <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp;  தமிழ் நூல்கள்
+                </NavLink>
+                @if (expandSubMenu)
+                {
+                    <ul class="nav flex-column">
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="thirukkural" @onclick="()=>expandSubMenu2 = !expandSubMenu2">
+                                <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp; திருக்குறள்
+                            </NavLink>
+                            @if (expandSubMenu2)
+                            {
+                                <ul class="nav flex-column">
+                                    <li class="nav-item px-3">
+                                        <NavLink class="nav-link" href="aram">
+                                            <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp; அறம்
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item px-3">
+                                        <NavLink class="nav-link" href="porul">
+                                            <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp; பொருள்
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item px-3">
+                                        <NavLink class="nav-link" href="inbam">
+                                            <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp; இன்பம்
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            }
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="naaladiyar">
+                                <span class="fa fa-solid fa-book" aria-hidden="true"></span>&nbsp;&nbsp;நாலடியார்
+                            </NavLink>
+                        </li>
+                    </ul>
+                }
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                </NavLink>
+            </li>
+
+        </ul>
+    </div>*@
+
+<MudDrawer @bind-Open="SideBarOpen" Elevation="1">
+    <MudDrawerHeader>
+        <MudAvatar Color="Color.Transparent" Size="Size.Large" Image="images/Siva.png" />
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="margin-top:10px; margin-left:15px;">Relizealous</MudText>
+    </MudDrawerHeader>
+    <MudNavMenu>
+        <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Filled.Home">Home</MudNavLink>
+        <MudNavLink Href="/fetchdata" Icon="@Icons.Filled.Storage">FetchData</MudNavLink>
+        <MudNavGroup Title="தமிழ் நூல்கள்" Icon="fa fa-solid fa-book" Expanded="true">
+            <MudNavGroup Title="திருக்குறள்" Expanded="true">
+                <MudNavLink Href="aram">அறம்</MudNavLink>
+                <MudNavLink Href="porul">பொருள்</MudNavLink>
+                <MudNavLink Href="inbam">இன்பம்</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+</MudNavMenu>
+</MudDrawer>
+
+@code {
+    [Parameter]
+    public bool SideBarOpen { get; set; }
+}
+
+@*@code {
+    private bool collapseNavMenu = true;
+
+    private bool expandSubMenu; //add
+
+    private bool expandSubMenu2;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}*@
