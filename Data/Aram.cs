@@ -22,7 +22,7 @@ namespace Relizealous.Data
             new Aram 
             {
                 Title="கடவுள் வாழ்த்து",
-                Title_Enum = "கடவுள்_வாழ்த்து",
+                Title_Enum = "Kadavul_vaazthu",
                 Description="The Praise of God.",
                 Link="/Contents/slokas/Tamil/hayagriivakavacham1.pdf",
             },

@@ -25,70 +25,70 @@ namespace Relizealous.Data
                 Statement="1.அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு",
                 Description="எழுத்துக்கள் எல்லாம் அகரத்தை அடிப்படையாக கொண்டிருக்கின்றன. அதுபோல உலகம் கடவுளை அடிப்படையாக கொண்டிருக்கிறது.",
                 AudioLink = "/sounds/Agara mudhala.m4a",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
             new Kural //2
             {
                Statement="2.கற்றதனால் ஆய பயனென்கொல் வாலறிவன் நற்றாள் தொழாஅர் எனின்",
                Description="தூய அறிவு வடிவாக விளங்கும் இறைவனுடைய நல்ல திருவடிகளை தொழாமல் இருப்பாரானால், அவர் கற்ற கல்வியினால் ஆகிய பயன் என்ன?",
                AudioLink = "/sounds/Katranathal Aya.m4a",
-               Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+               Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
              new Kural //3
             {
                Statement="3.மலர்மிசை ஏகினான் மாணடி சேர்ந்தார் நிலமிசை நீடுவாழ் வார்",
                Description="அன்பரின் அகமாகிய மலரில் வீற்றிருக்கும் கடவுளின் சிறந்த திருவடிகளை பொருந்தி நினைக்கின்றவர், இன்ப உலகில் நிலைத்து வாழ்வார்",
                AudioLink = "/sounds/Malarmisai eginan.m4a",
-               Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+               Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
             new Kural //4
             {
                Statement="4.வேண்டுதல்வேண் டாமை இலானடி சேர்ந்தார்க்கு யாண்டும் இடும்பை இல",
                 Description="விருப்பு வெறுப்பு இல்லாத கடவுளின் திருவடிகளை பொருந்தி நினைக்கின்றவர்க்கு எப்போதும் எவ்விடத்திலும் துன்பம் இல்லை",
                 AudioLink = "/sounds/Vendudhal vendamai.m4a",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
              new Kural //5
             {
                Statement="5.இருள்சேர் இருவினையும் சேரா இறைவன் பொருள்சேர் புகழ்புரிந்தார் மாட்டு",
                 Description="கடவுளின் உண்மைப் புகழை விரும்பி அன்பு செலுத்துகின்றவரிடம் அறியாமையால் விளையும் இருவகை வினையும் சேர்வதில்லை",
                 AudioLink = "/sounds/duh.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
              },
             new Kural //6
             {
                Statement="6.பொறிவாயில் ஐந்தவித்தான் பொய்தீர் ஒழுக்க நெறிநின்றார் நீடுவாழ் வார்",
                 Description="ஐம்பொறி வாயிலாக பிறக்கும் வேட்கைகளை அவித்த இறைவனுடைய பொய்யற்ற ஒழுக்க நெறியில் நின்றவர், நிலை பெற்ற நல்வாழ்க்கை வாழ்வர்",
                 AudioLink = "/sounds/dwayne.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
             new Kural //7
             {
                Statement="7.தனக்குவமை இல்லாதான் தாள்சேர்ந்தார்க் கல்லால் மனக்கவலை மாற்றல் அரிது",
                 Description="தனக்கு ஒப்புமை இல்லாத தலைவனுடைய திருவடிகளைப் பொருந்தி நினைக்கின்றவர் அல்லாமல், மற்றவர்க்கு மனக்கவலையை மாற்ற முடியாது",
                 AudioLink = "/sounds/dwayne.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
              new Kural //8
             {
                Statement="8.அறவாழி அந்தணன் தாள்சேர்ந்தார்க் கல்லால் பிறவாழி நீந்தல் அரிது",
                 Description="அறக்கடலாக விளங்கும் கடவுளின் திருவடிகளைப் பொருந்தி நினைக்கின்றவர் அல்லாமல், மற்றவர் பொருளும் இன்பமுமாகிய மற்ற கடல்களைக் கடக்க முடியாது",
                 AudioLink = "/sounds/dwayne.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
               new Kural //9
             {
                Statement="9.கோளில் பொறியின் குணமிலவே எண்குணத்தான் தாளை வணங்காத் தலை",
                 Description="கேட்காதசெவி, பார்க்காத கண் போன்ற எண் குணங்களை உடைய கடவுளின் திருவடிகளை வணங்காதவரின் தலைகள் பயனற்றவைகளாம்",
                 AudioLink = "/sounds/dwayne.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
              new Kural //10
             {
                Statement="10.பிறவிப் பெருங்கடல் நீந்துவர் நீந்தார் இறைவன் அடிசேரா தார்",
                 Description="இறைவனுடைய திருவடிகளை பொருந்தி நினைக்கின்றவர் பிறவியாகிய பெரிய கடலைக் கடக்க முடியும். மற்றவர் கடக்க முடியாது",
                 AudioLink = "/sounds/dwayne.mp3",
-                Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
+                Adhikaram = AdhikaramName.Kadavul_vaazthu
             },
              new Kural //11
             {
