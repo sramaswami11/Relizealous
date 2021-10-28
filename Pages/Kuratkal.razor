@@ -10,8 +10,8 @@
 <h4> @key2</h4>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
-
-    @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == title))
+    
+    @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == key1))
     {
         <TheCard HeaderText="@kural.Statement">
             <b>@kural.Description</b><br /><br />
@@ -33,10 +33,11 @@
 
     private CallJavascript jsObj;
 
-    private string title = string.Empty;
+    //private string title = string.Empty;
 
     protected override void OnInitialized()
     {
+        Console.WriteLine($"key1 =" + key1);
         jsObj = new CallJavascript(js);
         key1 = key1 ?? "1";
         //Relizealous.Common.NavigationManagerExtensions.TryGetQueryString<string>(NavManager, "title", out title);
