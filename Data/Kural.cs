@@ -45,7 +45,7 @@ namespace Relizealous.Data
             {
                Statement="4.வேண்டுதல்வேண் டாமை இலானடி சேர்ந்தார்க்கு யாண்டும் இடும்பை இல",
                 Description="விருப்பு வெறுப்பு இல்லாத கடவுளின் திருவடிகளை பொருந்தி நினைக்கின்றவர்க்கு எப்போதும் எவ்விடத்திலும் துன்பம் இல்லை",
-                AudioLink = "/sounds/duh.mp3",
+                AudioLink = "/sounds/Vendudhal vendamai.m4a",
                 Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
             },
              new Kural //5

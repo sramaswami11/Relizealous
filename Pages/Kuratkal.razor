@@ -1,16 +1,17 @@
-﻿@*@page  "/kuratkal"*@
+﻿@page  "/kuratkal"
 @*@page "/kuratkal/{key1?}/{key2?}"*@
-@page "/kuratkal/{key1?}/"
+@*@page "/kuratkal/{key1?}/"*@
 
 @using Relizealous.Common
 @inject IJSRuntime js;
+@inject NavigationManager NavManager;
 
 
 <h4> @key2</h4>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
 
-    @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == key1))
+    @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == title))
     {
         <TheCard HeaderText="@kural.Statement">
             <b>@kural.Description</b><br /><br />
@@ -32,9 +33,12 @@
 
     private CallJavascript jsObj;
 
+    private string title = string.Empty;
+
     protected override void OnInitialized()
     {
         jsObj = new CallJavascript(js);
-        key1 = key1 ?? "1";
+        //key1 = key1 ?? "1";
+        Relizealous.Common.NavigationManagerExtensions.TryGetQueryString<string>(NavManager, "title", out title);
     }
 }
