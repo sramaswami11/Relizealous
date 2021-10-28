@@ -13,7 +13,7 @@ namespace Relizealous.Data
         public enum AdhikaramName
         {
             //[Description("கடவுள் வாழ்த்து")]
-            Kadavulvaazthu,
+            கடவுள்_வாழ்த்து,
             வான்சிறப்பு,
             நீத்தார்_பெருமை,
             அறன்_வலியுறுத்தல்
