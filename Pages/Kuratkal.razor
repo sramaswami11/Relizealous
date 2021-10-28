@@ -1,6 +1,6 @@
-﻿@page  "/kuratkal"
+﻿@*@page  "/kuratkal"*@
 @*@page "/kuratkal/{key1?}/{key2?}"*@
-@*@page "/kuratkal/{key1?}/"*@
+@page "/kuratkal/{key1?}/"
 
 @using Relizealous.Common
 @inject IJSRuntime js;
@@ -38,7 +38,7 @@
     protected override void OnInitialized()
     {
         jsObj = new CallJavascript(js);
-        //key1 = key1 ?? "1";
-        Relizealous.Common.NavigationManagerExtensions.TryGetQueryString<string>(NavManager, "title", out title);
+        key1 = key1 ?? "1";
+        //Relizealous.Common.NavigationManagerExtensions.TryGetQueryString<string>(NavManager, "title", out title);
     }
 }

@@ -24,7 +24,7 @@ namespace Relizealous.Data
             {
                 Statement="1.அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு",
                 Description="எழுத்துக்கள் எல்லாம் அகரத்தை அடிப்படையாக கொண்டிருக்கின்றன. அதுபோல உலகம் கடவுளை அடிப்படையாக கொண்டிருக்கிறது.",
-                AudioLink = "sounds/Agara_mudhala.m4a",
+                AudioLink = "https://raw.githubusercontent.com/sramaswami11/Relizealous/master/sounds/duh.mp3",
                 Adhikaram = AdhikaramName.கடவுள்_வாழ்த்து
             },
             new Kural //2
