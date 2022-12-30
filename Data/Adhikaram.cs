@@ -6,14 +6,15 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Relizealous.Data
+namespace EnnumEzutthum.Data
 {
     public static class Adhikaram
     {
         public enum AdhikaramName
         {
             //[Description("கடவுள் வாழ்த்து")]
-            கடவுள்_வாழ்த்து,
+            //கடவுள்_வாழ்த்து,
+            kadavul_vazhthu,
             வான்சிறப்பு,
             நீத்தார்_பெருமை,
             அறன்_வலியுறுத்தல்

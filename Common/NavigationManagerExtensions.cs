@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Relizealous.Common
+namespace EnnumEzutthum.Common
 {
     public static class NavigationManagerExtensions
     {

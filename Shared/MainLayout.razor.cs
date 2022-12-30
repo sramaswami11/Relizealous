@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Relizealous.Shared
+namespace EnnumEzutthum.Shared
 {
     public partial class MainLayout
     {

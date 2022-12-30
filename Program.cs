@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Relizealous
+namespace EnnumEzutthum
 {
     public class Program
     {

@@ -1,12 +1,12 @@
 ﻿@page "/aram"
-@using Relizealous.Data
+@using EnnumEzutthum.Data
 <h3>அதிகாரங்கள் using parameters</h3>
 
 
     
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
-    @foreach (var aram in Relizealous.Data.Aram.Collection)
+    @foreach (var aram in EnnumEzutthum.Data.Aram.Collection)
     {
     <TheCard HeaderText="@aram.Title">
         <b>@aram.Description</b><br /><br />

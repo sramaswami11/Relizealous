@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Relizealous.Data
+namespace EnnumEzutthum.Data
 {
     public class Aram
     {
@@ -22,7 +22,8 @@ namespace Relizealous.Data
             new Aram 
             {
                 Title="கடவுள் வாழ்த்து",
-                Title_Enum = "கடவுள்_வாழ்த்து",
+                //Title_Enum = "கடவுள்_வாழ்த்து",
+                Title_Enum = "kadavul_vazhthu",
                 Description="The Praise of God.",
                 Link="/Contents/slokas/Tamil/hayagriivakavacham1.pdf",
             },

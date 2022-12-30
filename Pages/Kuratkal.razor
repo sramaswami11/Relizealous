@@ -2,7 +2,7 @@
 @*@page "/kuratkal/{key1?}/{key2?}"*@
 @page "/kuratkal/{key1?}/"
 
-@using Relizealous.Common
+@using EnnumEzutthum.Common
 @inject IJSRuntime js;
 @inject NavigationManager NavManager;
 
@@ -13,15 +13,20 @@
     
     @foreach (var kural in Kural.Collection.Where(x => x.Adhikaram.ToString() == key1))
     {
-        <TheCard HeaderText="@kural.Statement">
-            <b>@kural.Description</b><br /><br />
-            <button class="btn btn-primary" @onclick="() => jsObj.PlayAudioFile(kural.AudioLink)">Play</button>
-            <span>&nbsp;</span>
-            <audio id="player">
-                <source id="playerSource" src="" />
-            </audio>
-            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Translate" Color="Color.Success">Translate</MudButton>
-        </TheCard>
+    <TheCard HeaderText="@kural.Statement">
+        <b>@kural.Description</b><br /><br />
+        <button class="btn btn-primary" @onclick="() => jsObj.PlayAudioFile(kural.AudioLink)">Play</button>
+        <span>&nbsp;</span>
+        <audio id="player">
+            <source id="playerSource" src="" />
+        </audio>
+        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Translate" Color="Color.Success">In English</MudButton>
+        @*<a href="https://youtu.be/0H8yntZmq-s" target="_blank" title="Watch this episode">
+            <div>
+                <img src="https://i.ytimg.com/vi/0H8yntZmq-s/hqdefault_live.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDH7oj2IzdB4Nz3YbZcaiaX_Stsog" class="card-img-top" alt="Some Title" asp-append-version="true">
+            </div>
+        </a>*@
+    </TheCard>
     }
 </div>
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Relizealous.Common
+namespace EnnumEzutthum.Common
 {
     public class CallJavascript
     {
