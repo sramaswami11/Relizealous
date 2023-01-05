@@ -3,7 +3,7 @@ static_sites:
 - name: relizealous
   github:
     repo: sramaswami11/Relizealous
-    branch: main
+    branch: master
     deploy_on_push: true
   dockerfile_path: Dockerfile.build 
   output_dir: /output/wwwroot
